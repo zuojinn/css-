@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>弯曲s形道路</title>
+    <style>
+        .box1,.box2,.box3,.box4{
+            position: relative;
+            padding:50px 100px;
+            width:400px;
+            margin:0 20px;
+            border:20px solid #f00;
+            border-top:0;
+        }
+        .box1,.box3{
+            border-left:0;
+            padding: 50px 80px 50px 100px;
+        }
+        .box2,.box4{
+            border-right:0;
+            padding: 50px 100px 50px 80px;
+        }
+        .box4{
+            border-bottom: 0;
+        }
+        .box-bottom-right,.box-top-left,.box-bottom-left,.box-top-right{
+            content: ' ';
+            height: 70px;
+            width: 70px;
+            background: #fff;
+            position: absolute;
+            z-index: 1;
+        }
+        .box-top-left{
+            top: -20px;
+            left: -20px; 
+        }
+        .box-top-right{
+            top: -20px;
+            right: -20px;
+        }
+        .box-bottom-left{
+            bottom: -20px;
+            left: -20px;
+        }
+        .box-bottom-right{
+            bottom: -20px;
+            right: -20px;
+        }
+        .box-bottom-right:before,.box-top-left:before,.box-bottom-left:before,.box-top-right:before{
+            content: ' ';
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            border: 20px solid #f00;
+        }
+        .box-bottom-right:before{
+            right: 0;
+            bottom: 0;
+            border-top: 0;
+            border-left: 0;
+            border-bottom-right-radius: 72px;
+        }
+        .box-top-left:before{
+            right: -20px;
+            top: 0px;
+            border-bottom: 0;
+            border-right: 0;
+            border-top-left-radius: 72px;
+        }
+        .box-bottom-left:before{
+            bottom: 0;
+            left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom-left-radius: 72px;
+        }
+        .box-top-right:before{
+            top: 0px;
+            right: 0px;
+            border-bottom: 0;
+            border-left: 0;
+            border-top-right-radius: 72px;
+        }
+        .text-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box-bottom-right"></div>
+    <h1 class="text-center">道路一</h1>
+</div>
+<div class="box2">
+    <div class="box-top-left"></div>
+    <div class="box-bottom-left"></div>
+    <h1 class="text-center">道路二</h1>
+</div>
+<div class="box3">
+    <div class="box-top-right"></div>
+    <div class="box-bottom-right"></div>
+    <h1 class="text-center">道路三</h1>
+</div>
+<div class="box4">
+    <div class="box-top-left"></div>
+    <h1 class="text-center">道路四</h1>
+</div>
+</body>
+</html>
